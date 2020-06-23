@@ -1,19 +1,18 @@
 {
-  "name": "pedidos-bot",
+  "name": "curso-bot",
   "version": "1.0.0",
-  "description": "Sistema de Pedidos via Chatbot",
-  "main": "fonte.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Dejaime Carlos de Oliveira",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "0.17.1",
-    "express": "^4.17.1",
     "moment": "2.20.1",
+    "node-schedule": "1.3.0",
     "telegraf": "3.17.3"
-  },
-  "devDependencies": {}
+  }
 }

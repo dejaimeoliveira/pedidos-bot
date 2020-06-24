@@ -6,7 +6,7 @@ const app = express( );
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
-  res.send("Olá, Neto");
+  res.send("Olá, Dejaime Carlos de Oliveira");
 })
 
 app.get('/pergunta', (req, res) => {
@@ -21,8 +21,19 @@ app.get("/mensagem/:tipo/:id", (req, res) => {
 })
 
 app.post('/pedido', (req, res) => {
-  console.log(req.body);
-  res.send("pedido recebido");
+  console.log(req);
+  const produto = req.body.produto;
+  const qtd = req.body.quantidade;
+  const pagto = req.body.tipoPagamento;
+  const bebida = req.body.bebida;
+
+  const pedido = {
+    produto,
+    qtd,
+    pagto,
+    bebida
+  }
+  res.jason(pedido);
 })
 
 /*app.listen(3000, '127.0.0.1', () => {
